@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background: url('../img/vario1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecalho {
+    padding: 1% 4% 0% 4%;
+}
+
+.cabecalho__nav {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    
+}
+
+.cabecalho__links { 
+    text-align: center;
+    width: 150px;   
+    padding: 12px;
+    border-radius: 8px;
+    font-family: "ONE PIECE", serif;
+    font-weight: 600;
+    font-size: 22px;
+    text-decoration: none;
+    background-color: white;
+    color: #6bc0de;
+    border: 3px #6bc0de solid;
+}
+
+.cabecalho__links:hover {
+    color: #035a7a;
+}
+
+.cabecalho__cadastrar {
+    margin-left: auto;
+}
+
+.principal {
+    flex-grow: 1;
+    padding: 8% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.principal_secao {
+    color: #000000;
+    width:500px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.principal_secao_conteiner {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   text-align: center;
+   gap: 32px;
+}
+
+.container__titulo {
+    display: flex;
+    justify-content: center;
+}
+
+.titulo {
+    padding: 16px 0;
+    width: 400px;
+    border-radius: 8px;
+    font-size: 28px;
+    font-weight: 600;
+    background-color: white;
+    font-family: "ONE PIECE", serif;
+    color: #6bc0de;
+    border: 3px #6bc0de solid;
+
+}
+
+.componentes {
+
+    border-spacing: 8px;
+
+    /* width: 200px;
+    text-align: center;
+    border-radius: 8px;
+    font-family: "ONE PIECE", serif;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 12px 0;
+    text-decoration: none;
+    color: #6bc0de;
+    border: 3px #6bc0de solid; */
+}
+
+.componentes:hover {
+    color: #035a7a;
+}
+
+.componentes__tabela__titulo {
+    color: #035a7a;
+    width: 200px;
+    background-color: white;
+    border: 3px #6bc0de solid;
+}
+
+.componentes__tabela {
+    width: 200px;
+    padding: 12px;
+    color: #6bc0de;
+    background-color: white;
+}
+
+.tabela__conteudo {
+    padding: 16px;
+    width: 200px;
+    border: 3px #6bc0de solid;
+
+
+}
+
+
+
+footer {
+
+    display: flex;
+    gap: 30px;
+    padding: 2% 4%;
+}
+
+.elementos__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 8px;
+    font-family: "ONE PIECE", serif;
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+    color: #6bc0de;
+    border: 3px #6bc0de solid;
+}
+
+.hover:hover {
+    border: 3px #035a7a solid;
+    cursor: pointer;
+}
