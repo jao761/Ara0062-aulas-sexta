@@ -1,13 +1,25 @@
+@import url('https://db.onlinewebfonts.com/c/82848488b73a87d72f2436c02b9ab608?family=ONE+PIECE');
+
+:root {
+  --cor-primaria: #0B1D51;
+  --cor-secundaria: #FFE3A9;
+  --cor-terciaria: #AAD7D9;
+  --cor-hover: #725CAD;
+  --fonte-padrao: 'ONE PIECE', sans-serif;
+
+}
+
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
+    font-family: var(--fonte-padrao);
     box-sizing: border-box;
     background: url('../img/vario1.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: white;
+    color: var(--cor-primaria);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -33,13 +45,13 @@ body {
     font-weight: 600;
     font-size: 22px;
     text-decoration: none;
-    background-color: white;
-    color: #6bc0de;
-    border: 3px #6bc0de solid;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    border: 3px var(--cor-secundaria) solid;
 }
 
 .cabecalho__links:hover {
-    color: #035a7a;
+    background-color: var(--cor-hover);
 }
 
 .cabecalho__cadastrar {
@@ -57,13 +69,13 @@ body {
 }
 
 .principal_secao {
-    color: #000000;
     width:500px;
     display: flex;
     flex-direction: column;
     gap: 40px;
     text-align: center;
     justify-content: space-between;
+    align-items: center;
     border-radius: 15px;
     padding: 30px;
 }
@@ -87,56 +99,69 @@ body {
     border-radius: 8px;
     font-size: 28px;
     font-weight: 600;
-    background-color: white;
+    background-color: var(--cor-primaria);
     font-family: "ONE PIECE", serif;
-    color: #6bc0de;
-    border: 3px #6bc0de solid;
+    color: var(--cor-secundaria);
+    border: 3px var(--cor-secundaria) solid;
 
 }
 
 .componentes {
 
-    border-spacing: 8px;
-
-    /* width: 200px;
-    text-align: center;
-    border-radius: 8px;
-    font-family: "ONE PIECE", serif;
-    font-size: 22px;
-    font-weight: 600;
-    padding: 12px 0;
-    text-decoration: none;
-    color: #6bc0de;
-    border: 3px #6bc0de solid; */
+    width: 600px;            /* largura fixa */
+    border-collapse: collapse;
+    table-layout: fixed;
 }
-
-.componentes:hover {
-    color: #035a7a;
-}
-
 .componentes__tabela__titulo {
-    color: #035a7a;
-    width: 200px;
-    background-color: white;
-    border: 3px #6bc0de solid;
+    color: var(--cor-terciaria);
 }
 
-.componentes__tabela {
-    width: 200px;
-    padding: 12px;
-    color: #6bc0de;
-    background-color: white;
-}
-
-.tabela__conteudo {
-    padding: 16px;
-    width: 200px;
-    border: 3px #6bc0de solid;
-
+tr, th {
+    font-size: 20px;
+    font-weight: 600px;
+    padding: 6px;
+    width: 150px;
+    color: var(--cor-secundaria);
+    background-color: var(--cor-primaria);
+    border: 3px var(--cor-secundaria) solid;
 
 }
 
+.imagens__tabela {
+    width: 150px;
+    height: 100px;
+}
 
+form {
+    display: flex;
+    background-color: var(--cor-primaria);
+    border: 3px var(--cor-secundaria) solid;
+}
+
+.campos {
+    font-size: 20px;
+    font-family: var(--fonte-padrao);
+    font-weight: 600;
+    background-color: var(--cor-primaria);
+    border: 3px var(--cor-secundaria) solid;
+    color: var(--cor-secundaria);
+    padding: 16px 0;
+    width: 200px;
+    border-radius: 8px;
+
+
+}
+
+.campos::placeholder {
+    color: var(--cor-secundaria);          /* muda a cor */          /* alguns navegadores aplicam opacidade por padrão */
+    opacity: 1;      /* remove a opacidade padrão */
+    font-style: normal; /* opcional */}
+
+.botao:hover {
+    background-color: var(--cor-hover);
+    cursor: pointer;
+    
+}
 
 footer {
 
@@ -156,11 +181,11 @@ footer {
     font-weight: 600;
     font-size: 20px;
     text-decoration: none;
-    color: #6bc0de;
-    border: 3px #6bc0de solid;
+    color: var(--cor-secundaria);
+    border: 3px var(--cor-secundaria) solid;
 }
 
 .hover:hover {
-    border: 3px #035a7a solid;
+    border: 3px var(--cor-hover) solid;
     cursor: pointer;
 }
