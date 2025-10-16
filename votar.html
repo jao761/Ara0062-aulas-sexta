@@ -4,37 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    <title>Document</title>
+    <title>Votar</title>
 </head>
 <body>
-    <header id="cabecalho">
+
+     <header id="cabecalho">
         <nav class="cabecalho__nav">
             <a class="cabecalho__links" href="index.html">HOME</a>
-            <a class="cabecalho__links cabecalho__cadastrar hover" href="votar.html">Votar</a>
-            <b class="cabecalho__links cabecalho__cadastrar">Contato</b>
+            <b class="cabecalho__links cabecalho__cadastrar"">Votar</b>
+            <a class="cabecalho__links cabecalho__cadastrar hover" href="contato.html">Contato</a>
             <a class="cabecalho__links cabecalho__cadastrar hover" href="login.html">Login</a>
             <a class="cabecalho__links cabecalho__cadastrar hover" href="cadastro.html">Cadastro</a>
         </nav>
     </header>
+    
     <main class="principal">
        
-        <form class="principal_secao" action="">
-            <h1 class="titulo">Entre em contato</h1>
-            <div class="tam-div-form">
-                <label for="">Nome completo</label>
-                <input class="campos" type="text" placeholder="DIGITE SEU NOME">
-            </div>
-            <div class="tam-div-form">
-                <label for="">Email</label>
-                <input class="campos" type="email" placeholder="DIGITE SEU EMAIL">
-            </div>
-            <div class="tam-div-form">
-                <label for="">Assunto</label>
-                <textarea class="campos" placeholder="DIGITE O ASSUNTO"></textarea>
-            </div>
-            <button class="campos botao">ENVIAR</button>
+        <form  class="principal_secao">
+             <h1 class="titulo">Vote</h1>
+            <select class="campos" id="nomes">
+            <option value="east-blue" data-alvo="id__img__alabasta">East Blue</option>
+            <option value="wano" data-alvo="id__img__wano">Wano</option>
+            </select>
+            <img  class="imagens__tabela" id="id__img__alabasta" src="assets/img__alabasta.png" alt="east-blue">
+            <img style="display: none;" class="imagens__tabela" id="id__img__wano" src="assets/img__wano.png" alt="img-alabasta">
+            <button type="submit" class="campos botao">Confirmar</button>
         </form>
+
     </main>
+
     <footer>
         
         <b class="elementos__footer" href="" >Criado por Joao Pontel <br>
@@ -50,5 +48,8 @@
         </a>
 
     </footer>
+
+    <script src="script.js"></script>
+
 </body>
-</html>
+</html>   

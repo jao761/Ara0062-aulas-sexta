@@ -1,11 +1,10 @@
-@import url('https://db.onlinewebfonts.com/c/82848488b73a87d72f2436c02b9ab608?family=ONE+PIECE');
-
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 :root {
   --cor-primaria: #0B1D51;
   --cor-secundaria: #FFE3A9;
   --cor-terciaria: #AAD7D9;
   --cor-hover: #725CAD;
-  --fonte-padrao: 'ONE PIECE', sans-serif;
+  --fonte-padrao: "Michroma", sans-serif;;
 
 }
 
@@ -25,7 +24,7 @@ body {
     flex-direction: column;
 }
 
-.cabecalho {
+#cabecalho {
     padding: 1% 4% 0% 4%;
 }
 
@@ -41,9 +40,9 @@ body {
     width: 150px;   
     padding: 12px;
     border-radius: 8px;
-    font-family: "ONE PIECE", serif;
-    font-weight: 600;
-    font-size: 22px;
+    font-family: var(--fonte-padrao);
+    font-weight: 400;
+    font-size: 20px;
     text-decoration: none;
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
@@ -72,7 +71,7 @@ body {
     width:500px;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 25px;
     text-align: center;
     justify-content: space-between;
     align-items: center;
@@ -100,7 +99,7 @@ body {
     font-size: 28px;
     font-weight: 600;
     background-color: var(--cor-primaria);
-    font-family: "ONE PIECE", serif;
+    font-family: var(--fonte-padrao);
     color: var(--cor-secundaria);
     border: 3px var(--cor-secundaria) solid;
 
@@ -116,8 +115,8 @@ body {
     color: var(--cor-terciaria);
 }
 
-tr, th {
-    font-size: 20px;
+tr, th, td {
+    fohnt-size: 20px;
     font-weight: 600px;
     padding: 6px;
     width: 150px;
@@ -132,20 +131,38 @@ tr, th {
     height: 100px;
 }
 
+.tam-div-form {
+    width: 200px;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    
+}
+
 form {
     display: flex;
     background-color: var(--cor-primaria);
     border: 3px var(--cor-secundaria) solid;
 }
 
+label {
+    align-self: flex-start; 
+    font-size: 13px;
+    font-family: var(--fonte-padrao);
+    font-weight: 600;
+    color: var(--cor-secundaria);
+}
+
 .campos {
-    font-size: 20px;
+    font-size: 12px;
     font-family: var(--fonte-padrao);
     font-weight: 600;
     background-color: var(--cor-primaria);
     border: 3px var(--cor-secundaria) solid;
     color: var(--cor-secundaria);
-    padding: 16px 0;
+    padding: 12px; 
     width: 200px;
     border-radius: 8px;
 
@@ -153,9 +170,9 @@ form {
 }
 
 .campos::placeholder {
-    color: var(--cor-secundaria);          /* muda a cor */          /* alguns navegadores aplicam opacidade por padrão */
-    opacity: 1;      /* remove a opacidade padrão */
-    font-style: normal; /* opcional */}
+    color: var(--cor-secundaria);
+    opacity: 0.5;
+}
 
 .botao:hover {
     background-color: var(--cor-hover);
@@ -177,7 +194,7 @@ footer {
     gap: 10px;
     padding: 12px;
     border-radius: 8px;
-    font-family: "ONE PIECE", serif;
+    font-family: var(--fonte-padrao);
     font-weight: 600;
     font-size: 20px;
     text-decoration: none;

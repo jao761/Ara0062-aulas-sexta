@@ -8,10 +8,14 @@
 </head>
 <body>
 
-    <header class="cabecalho">
+    <header id="cabecalho">
         <nav class="cabecalho__nav">
             <b class="cabecalho__links" >HOME</b>
+            <a class="cabecalho__links cabecalho__cadastrar hover" href="votar.html">Votar</a>
             <a class="cabecalho__links cabecalho__cadastrar hover" href="contato.html">Contato</a>
+            <a class="cabecalho__links cabecalho__cadastrar hover" href="login.html">Login</a>
+            <a class="cabecalho__links cabecalho__cadastrar hover" href="cadastro.html">Cadastro</a>
+            
             
         </nav>
     </header>
@@ -19,40 +23,45 @@
     <main class="principal">
         <section class="principal_secao">
             <div class="container__titulo">
-                <h1 class="titulo">Escolha seu arco favorito</h1>
+                <h1 class="titulo">Mais votados</h1>
             </div>
             <table class="componentes">
-                <tr>
-                    <th class="tabela__conteudo componentes__tabela__titulo">Imagem</th>                    
-                    <th class="tabela__conteudo componentes__tabela__titulo">Arco</th>
-                    <th class="tabela__conteudo componentes__tabela__titulo">Numero de votos</th>
-                    <th class="tabela__conteudo componentes__tabela__titulo">Posicao</th>
-                </tr>
-                <tr>
-                    <th ><img class="imagens__tabela" src="assets/img__alabasta.png" alt="img__alabasta"></th>
-                    <th>Alabasta</th>
-                    <th>0</th>
-                    <th>1º</th>
-                </tr>
-                <tr>
-                    <th><img class="imagens__tabela" src="assets/img__dressrosa.png" alt="img__dressrosa"></th>
-                    <th>Dressrosa</th>
-                    <th>0</th>
-                    <th>1º</th>
-                </tr>
-                  <tr>
-                    <th><img class="imagens__tabela" src="assets/img__wano.png" alt="img__alabasta"></th>
-                    <th>Wano</th>
-                    <th>0</th>
-                    <th>1º</th>
-                </tr>
-                  <tr>
-                    <th><img class="imagens__tabela" src="assets/img__eastblue.png" alt="img__alabasta"></th>
-                    <th> Long town</th>
-                    <th>0</th>
-                    <th>1º</th>
-                </tr>
-            </table>
+  <thead>
+    <tr>
+      <th class="tabela__conteudo componentes__tabela__titulo">Imagem</th>                    
+      <th class="tabela__conteudo componentes__tabela__titulo">Arco</th>
+      <th class="tabela__conteudo componentes__tabela__titulo">Número de votos</th>
+      <th class="tabela__conteudo componentes__tabela__titulo">Posição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img class="imagens__tabela" src="assets/img__alabasta.png" alt="Alabasta"></td>
+      <td>Alabasta</td>
+      <td>0</td>
+      <td>1º</td>
+    </tr>
+    <tr>
+      <td><img class="imagens__tabela" src="assets/img__dressrosa.png" alt="Dressrosa"></td>
+      <td>Dressrosa</td>
+      <td>0</td>
+      <td>2º</td>
+    </tr>
+    <tr>
+      <td><img class="imagens__tabela" src="assets/img__wano.png" alt="Wano"></td>
+      <td>Wano</td>
+      <td>0</td>
+      <td>3º</td>
+    </tr>
+    <tr>
+      <td><img class="imagens__tabela" src="assets/img__eastblue.png" alt="Loguetown"></td>
+      <td>Loguetown</td>
+      <td>0</td>
+      <td>4º</td>
+    </tr>
+  </tbody>
+</table>
+ 
                
         </section>
     </main>
