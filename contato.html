@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <script src="js/validacao.js"></script>
     <title>Document</title>
 </head>
 <body>
     <header id="cabecalho">
         <nav class="cabecalho__nav">
-            <a class="cabecalho__links" href="index.html">HOME</a>
-            <a class="cabecalho__links cabecalho__cadastrar hover" href="votar.html">Votar</a>
-            <b class="cabecalho__links cabecalho__cadastrar">Contato</b>
-            <a class="cabecalho__links cabecalho__cadastrar hover" href="login.html">Login</a>
-            <a class="cabecalho__links cabecalho__cadastrar hover" href="cadastro.html">Cadastro</a>
+            <a class="cabecalho__links hover href="index.html">HOME</a>
+            <a class="cabecalho__links hover" href="votar.html">Votar</a>
+            <b class="cabecalho__links">Contato</b>
+            <a class="cabecalho__links  cabecalho__cadastrar hover" href="login.html">Login</a>
+            <a id="alternaTema" href="#">Alternar Tema</a>
         </nav>
     </header>
     <main class="principal">
@@ -26,7 +27,11 @@
             </div>
             <div class="tam-div-form">
                 <label for="">Email</label>
-                <input class="campos" type="email" placeholder="DIGITE SEU EMAIL">
+                <input class="campos" type="email" id="id_email" placeholder="DIGITE SEU EMAIL">
+            </div>
+            <div class="tam-div-form">
+                <label for="">CPF</label>
+                <input class="campos" type="text" id="id_cpf" placeholder="DIGITE SEU CPF">
             </div>
             <div class="tam-div-form">
                 <label for="">Assunto</label>
@@ -50,5 +55,6 @@
         </a>
 
     </footer>
+    <script src="js/tema.js"></script>
 </body>
 </html>

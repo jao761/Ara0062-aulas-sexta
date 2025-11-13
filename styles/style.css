@@ -1,74 +1,96 @@
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
-:root {
-  --cor-primaria: #0B1D51;
-  --cor-secundaria: #FFE3A9;
-  --cor-terciaria: #AAD7D9;
-  --cor-hover: #725CAD;
-  --fonte-padrao: "Michroma", sans-serif;;
 
+:root {
+  --cor-primaria: #5682B1;   /* Azul Médio */
+  --cor-secundaria: #739EC9; /* Azul Claro */
+  --cor-terciaria: #FFE8DB;  /* Bege/Pêssego (Texto) */
+  --cor-hover: #000000;      /* Preto */
+  --fonte-padrao: "Michroma", sans-serif;
 }
 
+/* Tema Escuro (Ativado pelo JS) */
+body.tema-escuro {
+  --cor-primaria: #121212;   /* Cinza Escuro (Fundo) */
+  --cor-secundaria: #ffffff; /* Cinza Quase Preto (Header) */
+  --cor-terciaria: #E0E0E0;  /* Cinza Claro (Texto) */
+  --cor-hover: #1E1E1E;      /* Azul (Destaque) */
+}
+
+/* Ajuste para placeholder no tema escuro */
+body.tema-escuro .campos::placeholder {
+  color: var(--cor-terciaria);
+  opacity: 0.5;
+}
+
+/* =========================================
+   2. ESTILOS GERAIS
+========================================= */
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
+    background-color: var(--cor-primaria);
     font-family: var(--fonte-padrao);
+    color: var(--cor-terciaria);
     box-sizing: border-box;
-    background: url('../img/vario1.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: var(--cor-primaria);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    /* Transição suave na troca de cor */
+    transition: background-color 0.3s, color 0.3s;
 }
 
+/* =========================================
+   3. CABEÇALHO
+========================================= */
 #cabecalho {
     padding: 1% 4% 0% 4%;
+    background-color: var(--cor-secundaria);
+    height: 75px;
+    text-align: center;
+    transition: background-color 0.3s;
 }
 
 .cabecalho__nav {
-    width: 100%;
     display: flex;
+    justify-content: flex-start;
     gap: 30px;
-    
 }
 
 .cabecalho__links { 
     text-align: center;
-    width: 150px;   
+    width: 120px;   
     padding: 12px;
     border-radius: 8px;
     font-family: var(--fonte-padrao);
     font-weight: 400;
-    font-size: 20px;
+    font-size: 15px;
     text-decoration: none;
     background-color: var(--cor-primaria);
-    color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
     border: 3px var(--cor-secundaria) solid;
-}
-
-.cabecalho__links:hover {
-    background-color: var(--cor-hover);
+    cursor: pointer;
 }
 
 .cabecalho__cadastrar {
     margin-left: auto;
 }
 
+/* =========================================
+   4. CONTEÚDO PRINCIPAL
+========================================= */
 .principal {
     flex-grow: 1;
     padding: 8% 15%;
     display: flex;
     align-items: center;
     justify-content: center;
-    
-
 }
 
 .principal_secao {
-    width:500px;
+    width: 500px;
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -79,19 +101,6 @@ body {
     padding: 30px;
 }
 
-.principal_secao_conteiner {
-   display: flex;
-   align-items: center;
-   flex-direction: column;
-   text-align: center;
-   gap: 32px;
-}
-
-.container__titulo {
-    display: flex;
-    justify-content: center;
-}
-
 .titulo {
     padding: 16px 0;
     width: 400px;
@@ -100,30 +109,28 @@ body {
     font-weight: 600;
     background-color: var(--cor-primaria);
     font-family: var(--fonte-padrao);
-    color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
     border: 3px var(--cor-secundaria) solid;
-
 }
 
+/* =========================================
+   5. TABELAS E COMPONENTES
+========================================= */
 .componentes {
-
-    width: 600px;            /* largura fixa */
+    width: 600px;
     border-collapse: collapse;
     table-layout: fixed;
 }
-.componentes__tabela__titulo {
-    color: var(--cor-terciaria);
-}
 
+/* --- AQUI ESTAVA O ERRO (fohnt-size) CORRIGIDO --- */
 tr, th, td {
-    fohnt-size: 20px;
-    font-weight: 600px;
+    font-size: 20px;     /* Corrigido */
+    font-weight: 600;    /* Corrigido (sem px) */
     padding: 6px;
     width: 150px;
-    color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
     background-color: var(--cor-primaria);
     border: 3px var(--cor-secundaria) solid;
-
 }
 
 .imagens__tabela {
@@ -131,6 +138,9 @@ tr, th, td {
     height: 100px;
 }
 
+/* =========================================
+   6. FORMULÁRIOS
+========================================= */
 .tam-div-form {
     width: 200px;   
     display: flex;
@@ -138,7 +148,6 @@ tr, th, td {
     justify-content: center;
     align-items: center;
     gap: 5px;
-    
 }
 
 form {
@@ -152,7 +161,7 @@ label {
     font-size: 13px;
     font-family: var(--fonte-padrao);
     font-weight: 600;
-    color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
 }
 
 .campos {
@@ -161,30 +170,42 @@ label {
     font-weight: 600;
     background-color: var(--cor-primaria);
     border: 3px var(--cor-secundaria) solid;
-    color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
     padding: 12px; 
     width: 200px;
     border-radius: 8px;
-
-
 }
 
 .campos::placeholder {
-    color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
     opacity: 0.5;
 }
 
-.botao:hover {
+.botao:hover, .hover:hover {
     background-color: var(--cor-hover);
     cursor: pointer;
-    
+    border-color: var(--cor-hover);
+    color: #fff; /* Texto branco no hover */
 }
 
-footer {
+.link_cadastrar {
+    color: var(--cor-terciaria);
+    opacity: 0.5;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+}
 
+/* =========================================
+   7. RODAPÉ
+========================================= */
+footer {
     display: flex;
     gap: 30px;
     padding: 2% 4%;
+    background-color: var(--cor-secundaria);
+    height: 75px;
+    transition: background-color 0.3s;
 }
 
 .elementos__footer {
@@ -198,11 +219,6 @@ footer {
     font-weight: 600;
     font-size: 20px;
     text-decoration: none;
-    color: var(--cor-secundaria);
+    color: var(--cor-terciaria);
     border: 3px var(--cor-secundaria) solid;
-}
-
-.hover:hover {
-    border: 3px var(--cor-hover) solid;
-    cursor: pointer;
 }

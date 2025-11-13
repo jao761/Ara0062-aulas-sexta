@@ -1,0 +1,38 @@
+[
+  {
+    "imagem": {
+      "src": "assets/img__alabasta.png",
+      "alt": "Alabasta"
+    },
+    "arco": "Alabasta",
+    "votos": 0,
+    "posicao": "1º"
+  },
+  {
+    "imagem": {
+      "src": "assets/img__dressrosa.png",
+      "alt": "Dressrosa"
+    },
+    "arco": "Dressrosa",
+    "votos": 0,
+    "posicao": "2º"
+  },
+  {
+    "imagem": {
+      "src": "assets/img__wano.png",
+      "alt": "Wano"
+    },
+    "arco": "Wano",
+    "votos": 0,
+    "posicao": "3º"
+  },
+  {
+    "imagem": {
+      "src": "assets/img__eastblue.png",
+      "alt": "Loguetown"
+    },
+    "arco": "Loguetown",
+    "votos": 0,
+    "posicao": "4º"
+  }
+]

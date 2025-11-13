@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">    
     <title>Pagina inicial</title>
 </head>
 <body>
@@ -11,12 +11,10 @@
     <header id="cabecalho">
         <nav class="cabecalho__nav">
             <b class="cabecalho__links" >HOME</b>
-            <a class="cabecalho__links cabecalho__cadastrar hover" href="votar.html">Votar</a>
-            <a class="cabecalho__links cabecalho__cadastrar hover" href="contato.html">Contato</a>
+            <a class="cabecalho__links hover" href="votar.html">Votar</a>
+            <a class="cabecalho__links hover" href="contato.html">Contato</a>
             <a class="cabecalho__links cabecalho__cadastrar hover" href="login.html">Login</a>
-            <a class="cabecalho__links cabecalho__cadastrar hover" href="cadastro.html">Cadastro</a>
-            
-            
+            <a id="alternaTema" href="#">Alternar Tema</a> 
         </nav>
     </header>
 
@@ -34,31 +32,7 @@
       <th class="tabela__conteudo componentes__tabela__titulo">Posição</th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <td><img class="imagens__tabela" src="assets/img__alabasta.png" alt="Alabasta"></td>
-      <td>Alabasta</td>
-      <td>0</td>
-      <td>1º</td>
-    </tr>
-    <tr>
-      <td><img class="imagens__tabela" src="assets/img__dressrosa.png" alt="Dressrosa"></td>
-      <td>Dressrosa</td>
-      <td>0</td>
-      <td>2º</td>
-    </tr>
-    <tr>
-      <td><img class="imagens__tabela" src="assets/img__wano.png" alt="Wano"></td>
-      <td>Wano</td>
-      <td>0</td>
-      <td>3º</td>
-    </tr>
-    <tr>
-      <td><img class="imagens__tabela" src="assets/img__eastblue.png" alt="Loguetown"></td>
-      <td>Loguetown</td>
-      <td>0</td>
-      <td>4º</td>
-    </tr>
+  <tbody id="corpo-tabela-arcos">
   </tbody>
 </table>
  
@@ -81,6 +55,7 @@
         </a>
 
     </footer>
-    
+    <script src="js/tema.js""></script>
+    <script src="js/carregar_dados.js"></script>
 </body>
 </html>

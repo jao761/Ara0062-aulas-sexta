@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function() {    
   const select = document.getElementById('nomes');
     
     // dispara quando a opção muda
@@ -12,6 +13,7 @@
       
       
     });
+});    
 
 
     function esconderImagens() {

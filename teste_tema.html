@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Tema</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+        /* Variáveis Padrão */
+        :root {
+            --cor-primaria: #5682B1;
+            --cor-secundaria: #739EC9;
+            --cor-terciaria: #FFE8DB;
+            --cor-hover: #000000;
+            --fonte-padrao: "Michroma", sans-serif;
+        }
+
+        /* Variáveis do Tema Escuro */
+        body.tema-escuro {
+            --cor-primaria: #121212;
+            --cor-secundaria: #1E1E1E;
+            --cor-terciaria: #E0E0E0;
+            --cor-hover: #5682B1;
+        }
+
+        /* Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--cor-primaria);
+            color: var(--cor-terciaria);
+            font-family: var(--fonte-padrao);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: background-color 0.5s, color 0.5s; /* Transição lenta para você ver mudando */
+        }
+
+        #cabecalho {
+            padding: 10px;
+            background-color: var(--cor-secundaria);
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+        }
+
+        a, b {
+            padding: 10px;
+            border: 2px solid var(--cor-terciaria);
+            text-decoration: none;
+            color: var(--cor-terciaria);
+            background: var(--cor-primaria);
+            cursor: pointer;
+        }
+
+        main {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+        }
+
+        /* Estilo especial para o botão de tema */
+        #alternaTema {
+            background-color: #fff;
+            color: #000;
+            font-weight: bold;
+            border-color: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <header id="cabecalho">
+        <nav>
+            <b>HOME</b>
+            <a href="#">Outro Link</a>
+            <a id="alternaTema" href="#">MUDAR TEMA</a>
+        </nav>
+    </header>
+
+    <main>
+        <p>O tema atual é: <span id="texto-estado">CLARO</span></p>
+    </main>
+
+    <script>
+        console.log("O Script iniciou!"); // Abra o console (F12) para ver isso
+
+        const body = document.body;
+        const btn = document.getElementById('alternaTema');
+        const textoEstado = document.getElementById('texto-estado');
+
+        // Função que troca as cores
+        function alternar() {
+            console.log("Clicou no botão!");
+            
+            // Troca a classe
+            body.classList.toggle('tema-escuro');
+
+            // Atualiza textos
+            if (body.classList.contains('tema-escuro')) {
+                btn.textContent = "VOLTAR P/ CLARO";
+                textoEstado.textContent = "ESCURO";
+                localStorage.setItem('preferenciaTema', 'dark');
+            } else {
+                btn.textContent = "MUDAR P/ ESCURO";
+                textoEstado.textContent = "CLARO";
+                localStorage.setItem('preferenciaTema', 'light');
+            }
+        }
+
+        // Recupera memória
+        const memoria = localStorage.getItem('preferenciaTema');
+        if (memoria === 'dark') {
+            body.classList.add('tema-escuro');
+            btn.textContent = "VOLTAR P/ CLARO";
+            textoEstado.textContent = "ESCURO";
+        }
+
+        // Ouve o clique
+        btn.addEventListener('click', function(event) {
+            event.preventDefault(); // IMPEDE QUE O LINK "PULE" OU MOSTRE O IP
+            alternar();
+        });
+    </script>
+</body>
+</html>

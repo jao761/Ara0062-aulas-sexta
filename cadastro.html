@@ -9,11 +9,11 @@
 <body>
     <header id="cabecalho">
         <nav class="cabecalho__nav">
-            <a class="cabecalho__links" href="index.html">HOME</a>
-            <a class="cabecalho__links cabecalho__cadastrar hover" href="votar.html">Votar</a>
-            <a class="cabecalho__links cabecalho__cadastrar hover" href="contato.html">Contato</a>
+            <a class="cabecalho__links hover" href="index.html">HOME</a>
+            <a class="cabecalho__links hover" href="votar.html">Votar</a>
+            <a class="cabecalho__links hover" href="contato.html">Contato</a>
             <a class="cabecalho__links cabecalho__cadastrar hover" href="login.html">Login</a>
-            <b class="cabecalho__links cabecalho__cadastrar">Cadastro</b>
+            <a id="alternaTema" href="#">Alternar Tema</a>
         </nav>
     </header>
     <main class="principal">
@@ -37,6 +37,7 @@
                 <input type="password" class="campos" placeholder="DIGITE A SENHA">
             </div>
             <button class="campos botao">ENVIAR</button>
+            <a class="link_cadastrar" href="cadastro.html">faça login aqui</a>
         </form>
     </main>
     <footer>
@@ -54,5 +55,6 @@
         </a>
 
     </footer>
+    <script src="js/tema.js"></script>
 </body>
 </html>
