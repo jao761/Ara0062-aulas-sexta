@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', function() {
   // Aplica o tema inicial
   if (temaSalvo === 'dark') {
     body.classList.add('tema-escuro');
-    if (btnAlternarTema) btnAlternarTema.textContent = 'Alternar para Tema Claro';
+    if (btnAlternarTema) btnAlternarTema.textContent = '🌙';
   } else {
     body.classList.remove('tema-escuro');
-    if (btnAlternarTema) btnAlternarTema.textContent = 'Alternar para Tema Escuro';
+    if (btnAlternarTema) btnAlternarTema.textContent = '☀️';
   }
 
   // Se o botão existir na página, adiciona o evento de clique
@@ -23,10 +23,10 @@ document.addEventListener('DOMContentLoaded', function() {
       
       if (body.classList.contains('tema-escuro')) {
         localStorage.setItem('preferenciaTema', 'dark');
-        btnAlternarTema.textContent = 'Alternar para Tema Claro';
+        btnAlternarTema.textContent = '🌙';
       } else {
         localStorage.setItem('preferenciaTema', 'light');
-        btnAlternarTema.textContent = 'Alternar para Tema Escuro';
+        btnAlternarTema.textContent = '☀️';
       }
     });
   }

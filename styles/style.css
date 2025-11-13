@@ -59,6 +59,11 @@ body {
     gap: 30px;
 }
 
+#alternaTema {
+    text-decoration: none;
+    font-size: 35px;
+}
+
 .cabecalho__links { 
     text-align: center;
     width: 120px;   
