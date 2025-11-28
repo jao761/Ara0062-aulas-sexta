@@ -1,5 +1,5 @@
 const tabelaCorpo = document.getElementById('corpo-tabela-arcos');
-const urlDados = 'data/dados.json';
+const urlDados = 'http://localhost:8080/listar_arcos.php';
 
 function carregarArcos() {
     fetch(urlDados)

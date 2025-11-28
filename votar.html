@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    <script src="js/script.js"></script>
     <title>Votar</title>
 </head>
 <body>
@@ -13,23 +12,47 @@
         <nav class="cabecalho__nav">
             <a class="cabecalho__links hover" href="index.html">HOME</a>
             <b class="cabecalho__links">Votar</b>
-            <a class="cabecalho__links  hover" href="contato.html">Contato</a>
-            <a class="cabecalho__links cabecalho__cadastrar hover" href="login.html">Login</a>
+            <a class="cabecalho__links  hover cabecalho__cadastrar" href="contato.html">Contato</a>
             <a id="alternaTema" href="#">Alternar Tema</a>
         </nav>
     </header>
     
     <main class="principal">
        
-        <form  class="principal_secao">
-             <h1 class="titulo">Vote</h1>
+        <form  class="principal_secao" id="formulario__post">
+            <h1 class="titulo">Vote</h1>
+            
+            <input type="email" id="email" class="campos" placeholder="Digite seu email" required>
+
             <select class="campos" id="nomes">
-            <option value="east-blue" data-alvo="id__img__alabasta">East Blue</option>
-            <option value="wano" data-alvo="id__img__wano">Wano</option>
+                <option value="East Blue" data-alvo="img__eastblue">East Blue</option>
+                <option value="Alabasta" data-alvo="img__alabasta">Alabasta</option>
+                <option value="Skypiea" data-alvo="img__skypiea">Skypiea</option>
+                <option value="Water 7" data-alvo="img__water7">Water 7</option>
+                <option value="Thriller Bark" data-alvo="img__thriller">Thriller Bark</option>
+                <option value="Marineford" data-alvo="img__marineford">Marineford</option>
+                <option value="Ilha dos Homens-Peixe" data-alvo="img__homenspeixe">Ilha dos Homens-Peixe</option>
+                <option value="Aliança Pirata" data-alvo="img__alianca">Aliança Pirata</option>
+                <option value="Whole Cake" data-alvo="img__wholecake">Whole Cake</option>
+                <option value="País de Wano" data-alvo="img__wano">País de Wano</option>
+                <option value="Saga Final" data-alvo="img__final">Saga Final</option>
             </select>
-            <img  class="imagens__tabela" id="id__img__alabasta" src="assets/img__alabasta.png" alt="east-blue">
-            <img style="display: none;" class="imagens__tabela" id="id__img__wano" src="assets/img__wano.png" alt="img-alabasta">
+
+                <img class="imagens__tabela" id="img__eastblue" src="assets/img__eastblue.png" style="display:none">
+                <img class="imagens__tabela" id="img__alabasta" src="assets/img__alabasta.png" style="display:none">
+                <img class="imagens__tabela" id="img__skypiea" src="assets/img__skypea.png" style="display:none">
+                <img class="imagens__tabela" id="img__water7" src="assets/img__water7.png" style="display:none">
+                <img class="imagens__tabela" id="img__thriller" src="assets/img__thriller.png" style="display:none">
+                <img class="imagens__tabela" id="img__marineford" src="assets/img__marineford.png" style="display:none">
+                <img class="imagens__tabela" id="img__homenspeixe" src="assets/img__ilha.png" style="display:none">
+                <img class="imagens__tabela" id="img__alianca" src="assets/img__alianca.png" style="display:none">
+                <img class="imagens__tabela" id="img__wholecake" src="assets/img__whole.png" style="display:none">
+                <img class="imagens__tabela" id="img__wano" src="assets/img__wano.png" style="display:none">
+                <img class="imagens__tabela" id="img__final" src="assets/img__final.png " style="display:none">
+
             <button type="submit" class="campos botao">Confirmar</button>
+            <button id="cancelarVoto" type="button" class="campos botao">Cancelar Voto</button>
+
         </form>
 
     </main>
@@ -50,5 +73,9 @@
 
     </footer>
     <script src="js/tema.js"></script>
+    <script src="js/exibirImagemVoto.js"></script>
+    <script src="js/votar.js"></script>
+    <script src="js/validarEmail.js"></script>
+
 </body>
 </html>   
